@@ -127,7 +127,7 @@ function createNodes(depth) {
 
   }
 
-  for (var i = 0; i < siblings; i++) {
+  for (var i = 0; i < (siblings == 0) ? divCount : siblings; i++) {
     if (created == divCount) {
       return elem;
     }

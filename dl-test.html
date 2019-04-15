@@ -112,7 +112,7 @@ var rebuild = arg("rebuild", false);
 var siblings = arg("siblings", 0);
 
 
-var depth = (siblings == 0) ? 0 : Math.pow(divCount, 1/siblings);
+var depth = (siblings == 0) ? 1 : Math.pow(divCount, 1/siblings);
 
 var created = 0;
 function createNodes(depth) {
@@ -127,7 +127,7 @@ function createNodes(depth) {
 
   }
 
-  for (var i = 0; i < (siblings == 0) ? divCount : siblings; i++) {
+  for (var i = 0; i < ((siblings == 0) ? divCount : siblings); i++) {
     if (created == divCount) {
       return elem;
     }
